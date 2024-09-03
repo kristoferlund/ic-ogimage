@@ -23,14 +23,6 @@ function App() {
       <Routes />
       <div className="column">
         <p style={{ textAlign: "center" }}>
-          Smart contract canisters on the Internet Computer can serve content
-          over HTTPS. That means whole websites can be hosted on the IC. This
-          project demonstrates how to{" "}
-          <b>dynamically generate Open Graph images</b> for an IC project. It
-          also shows how to <b>dynamically modify the HTML metadata</b> of each
-          page to improve SEO.
-        </p>
-        <p style={{ textAlign: "center" }}>
           <a href="https://github.com/kristoferlund/ic-ogimage">
             https://github.com/kristoferlund/ic-ogimage
           </a>

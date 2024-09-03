@@ -9,7 +9,7 @@ use ic_certification::{fork_hash, labeled_hash};
 use include_dir::{include_dir, Dir};
 use resvg::{
     tiny_skia::{self, Pixmap},
-    usvg::{self, fontdb, Options, Tree},
+    usvg::{fontdb, Options, Tree},
 };
 use serde_json::{json, Value};
 

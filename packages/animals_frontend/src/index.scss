@@ -1,9 +1,13 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 50px;
+    margin: 0;
     padding: 0;
     line-height: 1.5em;
+}
+
+ul {
+    margin: 0;
 }
 
 .section-bg {
@@ -13,7 +17,7 @@ body {
 .column {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 650px;
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
@@ -33,4 +37,14 @@ body {
 
 .links img:hover {
     opacity: 1;
+}
+
+@media (max-width: 650px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    .column {
+        width: 100%;
+    }
 }
