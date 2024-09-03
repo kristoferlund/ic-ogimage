@@ -29,7 +29,7 @@ export default function Detail({ id }: { id: number }) {
 
           <p>OG Image:</p>
 
-          <img src={`/${id}/ogimage.svg`} width="100%" />
+          <img src={`/${id}/ogimage.png`} width="100%" />
         </div>
       )}
     </section>

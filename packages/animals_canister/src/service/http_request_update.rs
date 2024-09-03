@@ -26,7 +26,7 @@ async fn http_request_update(req: HttpRequest) -> HttpResponse {
     let rendered_index_asset = render_index_html(
         format!("/{}", animal_id),
         json!({
-            "ogimage": format!("{}/ogimage.svg", animal_id),
+            "ogimage": format!("{}/ogimage.png", animal_id),
             "title": format!("{} {} - IC OG Image Example", animal.emoji, animal.name),
             "description": "Generate OG images for IC projects."
         }),

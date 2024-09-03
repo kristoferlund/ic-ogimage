@@ -31,7 +31,7 @@ export default function List() {
 
       <p>OG Image:</p>
 
-      <img src={`/ogimage.svg`} width="100%" />
+      <img src={`/ogimage.png`} width="100%" />
     </section>
   );
 }
