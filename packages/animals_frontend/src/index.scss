@@ -1,0 +1,36 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.section-bg {
+    background-color: #f0f0f0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.links img {
+    opacity: 0.5;
+}
+
+.links img:hover {
+    opacity: 1;
+}

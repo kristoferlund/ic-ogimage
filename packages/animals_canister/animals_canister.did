@@ -1,0 +1,28 @@
+type HeaderField = record { text; text; };
+
+type HttpRequest = record {
+    method: text;
+    url: text;
+    headers: vec HeaderField;
+    body: blob;
+};
+
+type HttpResponse = record {
+  status_code: nat16;
+  headers: vec HeaderField;
+  body: blob;
+  upgrade : opt bool;
+};
+
+type Animal = record {
+  id : nat32;
+  name: text;
+  emoji: text;
+};
+
+service : {
+    http_request: (request: HttpRequest) -> (HttpResponse) query;
+    http_request_update: (request: HttpRequest) -> (HttpResponse);
+    animals_list: () -> (vec Animal) query;
+    animals_get: (nat32) -> (Animal) query;
+}

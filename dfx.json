@@ -1,0 +1,20 @@
+{
+  "canisters": {
+    "animals_canister": {
+      "candid": "packages/animals_canister/animals_canister.did",
+      "package": "animals_canister",
+      "declarations": {
+        "output": "packages/animals_frontend/src/declarations"
+      },
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,3 @@
+[workspace]
+members = ["packages/animals_canister"]
+resolver = "2"
