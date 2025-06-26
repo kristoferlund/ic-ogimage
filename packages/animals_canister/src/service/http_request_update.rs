@@ -32,7 +32,7 @@ async fn http_request_update(req: HttpRequest) -> HttpResponse {
         }),
     );
 
-    ASSETS.with_borrow_mut(|certified_assets| {
+    let rendered_ogimage_asset = ASSETS.with_borrow_mut(|certified_assets| {
         certified_assets.certify_asset(rendered_index_asset.clone(), &default_headers());
 
         let rendered_ogimage_asset = render_ogimage_svg(json!({
@@ -40,11 +40,21 @@ async fn http_request_update(req: HttpRequest) -> HttpResponse {
             "emoji": animal.emoji,
             "name": animal.name
         }));
-        certified_assets.certify_asset(rendered_ogimage_asset, &default_headers());
+        certified_assets.certify_asset(rendered_ogimage_asset.clone(), &default_headers());
+        rendered_ogimage_asset
     });
 
     update_root_hash();
 
+    if req.url.ends_with("/ogimage.png") {
+        return HttpResponse {
+            status_code: 200,
+            body: rendered_ogimage_asset.content,
+            headers: default_headers(),
+            upgrade: None,
+        };
+    }
+    
     HttpResponse {
         status_code: 200,
         body: rendered_index_asset.content,
